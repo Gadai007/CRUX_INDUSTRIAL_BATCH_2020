@@ -2,7 +2,7 @@ package AssignmentRecursion;
 
 public class TriangleSum {
     public static void main(String[] args) {
-        add(4,0);
+        //add(4,0);
         add1(4,0,1);
     }
     public static void add(int n,int sum){

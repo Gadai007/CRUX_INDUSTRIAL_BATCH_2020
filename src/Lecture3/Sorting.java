@@ -8,8 +8,8 @@ public class Sorting {
         int ar[] = {5,4,3,2,1};
 
         bubble(ar);
-        selection(ar);
-        insertion(ar);
+        //selection(ar);
+        //insertion(ar);
 
         System.out.println(Arrays.toString(ar));
 

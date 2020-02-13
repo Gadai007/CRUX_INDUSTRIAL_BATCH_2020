@@ -13,6 +13,7 @@ public class Palindrome {
         else {
             System.out.println("Not Palindrome");
         }
+        reverse(1234);
     }
     public static int reverse(int n){
 

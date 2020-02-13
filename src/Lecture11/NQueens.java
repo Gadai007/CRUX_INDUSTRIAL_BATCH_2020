@@ -27,7 +27,7 @@ public class NQueens {
                 return false;
             }
         }
-        int left = Math.min(row,col);
+        int left = Math.min(row,col);// takes the minimum value from row and col
 
         for (int i = 1; i <= left ; i++) {
             if (board[row - i][col - i]){ // if true and it means it checks diagonally left
