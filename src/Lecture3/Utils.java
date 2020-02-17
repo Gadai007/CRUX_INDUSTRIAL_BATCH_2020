@@ -6,6 +6,7 @@ public class Utils {
         System.out.println(maxvalue(ar));
         //System.out.println(maxindex(ar));
 
+
     }
     public static int maxvalue(int[] ar){
         int max = Integer.MIN_VALUE;

@@ -2,7 +2,7 @@ package Lecture8;
 
 public class StringRecursion {
     public static void main(String[] args) {
-        subsequence("","abc");
+        subsequence("","ba");
 
     }
     public  static void subsequence(String processed, String unprocessed){
