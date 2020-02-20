@@ -4,7 +4,7 @@ public class Question1 {
     public static void main(String[] args) {
         print(5,0);
     }
-    public static void print(int n,int index){ //5 3 1 2 4 6
+    public static void print(int n,int index){ //5 3 1 2 4
         if (index == n){
             return;
         }
