@@ -24,6 +24,9 @@ public class Queue {
         return  end ==0;
     }
     public int remove(){
+        if (isEmpty()){
+            return -1;
+        }
         int temp = ar[0];
         for (int i = 1; i <end ; i++) {
             ar[i-1] = ar[i];
@@ -37,7 +40,7 @@ public class Queue {
         }
         System.out.println();
     }
-    public int front(){
+    public int end(){
         return ar[0];
     }
 }

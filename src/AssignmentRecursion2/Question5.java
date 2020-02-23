@@ -2,8 +2,9 @@ package AssignmentRecursion2;
 
 public class Question5 {
     public static void main(String[] args) {
-        star("","hello",0);
-    }
+        System.out.println(star("","hello",0));
+   }
+
     public static String star(String processed, String unprocessed, int index){
         if (index == unprocessed.length()){
             System.out.println(processed);

@@ -5,35 +5,46 @@ public class CircularQueue {
 
     private int end;
 
+    private int front;
+
     private int[] ar;
+
+    private int size;
 
     public CircularQueue(){
         this.ar = new int[DEFAULT_SIZE];
         this.end = 0;
+        this.front =0;
+        this.size = 0;
     }
     public boolean isFull(){
-        return end == ar.length;
+        return size == ar.length;
     }
     public void insert(int element){
         if (isFull()){
             return;
         }
         ar[end++] = element;
+        end = end % ar.length;
+        size++;
+        return;
     }
     public boolean isEmpty(){
-        return  end ==0;
+        return  size ==0;
     }
     public int remove(){
-        int temp = ar[0];
-        for (int i = 1; i <end ; i++) {
-            ar[i-1] = ar[i];
+        if (isEmpty()) {
+            return -1;
         }
-        end--;
+        int temp = ar[front];
+        front = front % ar.length;
+        size--;
+        front++;
         return temp;
     }
     public void display(){
-        for (int i = 0; i <end ; i++) {
-            System.out.print(ar[i]);
+        for (int i = 0; i <size; i++) {
+            System.out.print(ar[(front + i)%ar.length] + " ");
         }
         System.out.println();
     }

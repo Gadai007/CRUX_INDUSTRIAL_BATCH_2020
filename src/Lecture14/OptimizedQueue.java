@@ -7,15 +7,12 @@ public class OptimizedQueue {
 
     private int front;
 
-    private int size;
-
     private int[] ar;
 
     public OptimizedQueue(){
         this.ar = new int[DEFAULT_SIZE];
         this.end = 0;
         this.front =0;
-        this.size = 0;
     }
     public boolean isFull(){
         return end == ar.length;
@@ -30,6 +27,9 @@ public class OptimizedQueue {
         return  end ==0;
     }
     public int remove(){
+        if (isEmpty()) {
+            return -1;
+        }
         int temp = ar[0];
 
         front++;

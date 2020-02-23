@@ -13,10 +13,10 @@ public class FarToCel {
     }
 
     public  static void FarToCel(int start, int end, int step){
-       // float C =0;
+
         while (start <= end){
         float C = (5f/9) * (start-32);
-        System.out.println(C);
+        System.out.println(start + "  " + C);
         start = start+step;
         }
 

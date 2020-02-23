@@ -3,7 +3,7 @@ package Lecture14;
 public class QueueClient {
     public static void main(String[] args) {
 
-        OptimizedQueue queue= new OptimizedQueue();
+        CircularQueue queue= new CircularQueue();
 
         for (int i = 0; i <9 ; i++) {
             queue.insert(i);

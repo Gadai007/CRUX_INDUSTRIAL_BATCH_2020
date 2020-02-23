@@ -3,8 +3,9 @@ package Lecture2;
 public class Converter {
     public static void main(String[] args) {
 
-        System.out.println(bin2deci(1011));
-        System.out.println(any2deci(1011, 2));
+        //System.out.println(bin2deci(1011));
+        //System.out.println(any2deci(1011, 2));
+        deci2any(63,8);
     }
 
     public static int bin2deci(int bin) {
