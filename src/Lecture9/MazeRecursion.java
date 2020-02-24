@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class MazeRecursion {
     public static void main(String[] args) {
-        maze(3,3,"");
+        //maze(3,3,"");
         System.out.println(listmaze(3,3,""));
     }
     public static void maze(int row, int col, String processed){
