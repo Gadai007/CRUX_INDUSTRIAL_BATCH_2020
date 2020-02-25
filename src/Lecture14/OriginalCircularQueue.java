@@ -1,17 +1,17 @@
 package Lecture14;
 
-public class CircularQueue {
-    public int DEFAULT_SIZE = 10;
+public class OriginalCircularQueue {
+    private int DEFAULT_SIZE = 10;
 
-    public int end;
+    private int end;
 
-    public int front;
+    private int front;
 
-    public int[] ar;
+    private int[] ar;
 
-    public int size;
+    private int size;
 
-    public CircularQueue(){
+    public OriginalCircularQueue(){
         this.ar = new int[DEFAULT_SIZE];
         this.end = 0;
         this.front =0;

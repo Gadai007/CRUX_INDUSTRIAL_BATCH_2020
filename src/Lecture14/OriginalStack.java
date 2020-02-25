@@ -1,13 +1,13 @@
 package Lecture14;
 
-public class Stack {
-   public int DEFAULT_SIZE = 10;
+public class OriginalStack {
+   private int DEFAULT_SIZE = 10;
 
-   public   int[] ar;
+   private  int[] ar;
 
-   public int top ;
+   private int top ;
 
-   public Stack(){
+   public OriginalStack(){
        this.ar = new int[DEFAULT_SIZE];
        this.top = 0;
    }
