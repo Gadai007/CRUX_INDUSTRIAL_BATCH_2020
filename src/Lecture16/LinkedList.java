@@ -289,12 +289,12 @@ public class LinkedList {
         LinkedList First = new LinkedList();
         First.head = L1.head;
         First.tail = mid;
-        First.size = (L1.size+1)/2;
-
+        First.size = (L1.size+1)/2; // because if it has even no. of nodes or odd no of nodes
+                                     //then also it will gives the required result.
         LinkedList Second = new LinkedList();
         Second.head = mid.next;
         Second.tail = L1.tail;
-        Second.size = (L1.size + 1)/2;
+        Second.size = (L1.size )/2;
 
         mid.next = null;
 
@@ -305,10 +305,9 @@ public class LinkedList {
     }
 
     public int kthlast(int k){
-        System.out.println("ghghj");
-        this.display();
-        Node slow = this.head;
-        Node fast = this.head;
+
+        Node slow = head;
+        Node fast = head;
 
         for (int i = 0; i <k ; i++) {
             fast = fast.next;
