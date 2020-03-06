@@ -5,13 +5,13 @@ public class Question2 {
 
         change("1234",0,0);
     }
-    public static int change(String s, int index, int sum){
+    public static void change(String s, int index, int sum){
         if (index == s.length()){
-            return sum;
+            System.out.println(sum);
+            return;
         }
         char ch = s.charAt(index);
-        int rem = ch - '0';
-        sum = (sum*10) + rem;
-        return change(s,index+1,sum);
+        sum = (sum*10) + (ch - '0');
+         change(s,index+1,sum);
     }
 }
