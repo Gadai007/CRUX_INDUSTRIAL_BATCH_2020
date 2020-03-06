@@ -1,11 +1,8 @@
 package Factory;
 
-public class Car {
-    public void start(){
-        System.out.println("Start like a car");
-    }
+public abstract class Car {
 
-    public void stop(){
-        System.out.println("Stop like a car");
-    }
+    public abstract void start();
+
+    public abstract void stop();
 }

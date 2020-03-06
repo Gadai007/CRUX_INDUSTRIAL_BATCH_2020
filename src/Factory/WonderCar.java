@@ -3,11 +3,11 @@ package Factory;
 public class WonderCar extends Car {
     @Override
     public void start() {
-        super.start();
+        System.out.println("start like a wondercar");
     }
 
     @Override
     public void stop() {
-        super.stop();
+        System.out.println("stop like a wondercar");
     }
 }
