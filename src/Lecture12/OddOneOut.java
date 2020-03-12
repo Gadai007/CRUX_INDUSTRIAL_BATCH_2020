@@ -5,7 +5,7 @@ public class OddOneOut {
      int[] ar = {1,2,3,4,3,2,1};
      int sum = 0;
         for (int i = 0; i <ar.length ; i++) {
-            sum = sum ^ ar[i];
+            sum = sum ^ ar[i];                 // ^ significs XOR gate
         }
         System.out.println(sum);
     }

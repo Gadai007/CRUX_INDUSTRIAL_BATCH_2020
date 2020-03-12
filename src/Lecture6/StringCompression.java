@@ -2,7 +2,7 @@ package Lecture6;
 
 public class StringCompression {
     public static void main(String[] args) {
-        compression("aaabbccaa");
+        System.out.println(compression("aaabbccds"));
     }
     public static String compression(String s) {
         StringBuilder b = new StringBuilder();
