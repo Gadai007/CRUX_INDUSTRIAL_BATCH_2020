@@ -20,7 +20,7 @@ public class BinaryTree {
         this.root = insert(this.root,s);
     }
     public Node insert(Node node, Scanner s){
-        if (node == null){
+        if (node == null){         //traverse from the end of the tree to root node and makes the links.
             System.out.println("Enter the value");
             int value = Integer.parseInt(s.nextLine());
             Node node1 = new Node(value);
@@ -91,4 +91,18 @@ public class BinaryTree {
 //    private int diameter(Node node){
 //        Node current = 1 + height(node.left) + height(node.right);
 //    }
+    public void mirror(){
+        mirror(root);
+    }
+    private void mirror(Node node){
+        if (node == null) {
+            return;
+        }
+        Node temp = node.left;
+        node.left = node.right;
+        node.right = temp;
+
+        mirror(node.left);
+        mirror(node.right);
+    }
 }
