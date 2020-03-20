@@ -1,5 +1,11 @@
 package BinarySearchTree;
 
+import BinaryTree.BinaryTree;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree {
     private Node root;
 
@@ -80,7 +86,7 @@ public class BinarySearchTree {
     public void sort(){
         sort(root);
     }
-    public void sort(Node node){
+    public void sort(Node node){     //In-order traversal(gives sorted tree)
         if ( node == null){
             return;
         }
@@ -101,7 +107,69 @@ public class BinarySearchTree {
         array2tree(ar,mid+1,end);
     }
 
-    public void pre_in_tree(){
+    public void levelorder(){
+        if ( root == null){
+            return;
+        }
+        Queue<Node> queue = new LinkedList();
+        queue.add(root);
 
+        while (!queue.isEmpty()){
+            Node temp = queue.remove();
+            System.out.println(temp.value);
+
+            if (temp.left != null){
+                queue.add(temp.left);
+            }
+            if (temp.right != null)
+                queue.add(temp.right);
+            }
+        }
+
+        public void populatebyprein(int[] pre, int[] in){
+            this.root = populatebyprein(root,pre,in);
+        }
+        private Node populatebyprein(Node node, int[] pre, int[] in){
+
+        if(in.length == 0){
+            return null;
+        }
+            int element = pre[0];
+            int index = find(in,element);
+
+            int[] pre_left = Arrays.copyOfRange(pre,1,index+1);
+            int[] pre_right = Arrays.copyOfRange(pre,index + 1,pre.length);
+
+            int[] in_left = Arrays.copyOfRange(in,0,index);
+            int[] in_right = Arrays.copyOfRange(in,index+1,in.length);
+
+            Node node1 = new Node(element);
+
+            node1.left = populatebyprein(node1.left,pre_left,in_left);
+            node1.right = populatebyprein(node1.right,pre_right,in_right);
+
+            return node1;
+        }
+
+    private int find(int[] in, int element) {
+
+        for (int i = 0; i < in.length ; i++) {
+            if (in[i] == element){
+                return i;
+            }
+        }
+        return -1;
     }
+    public int height(){
+        return height(root);
+    }
+
+    private int height(Node node){
+        if (node == null){
+            return 0;
+        }
+        return 1 + Math.max(height(node.left),height(node.right));
+    }
+
 }
+

@@ -23,8 +23,8 @@ public class BinaryTree {
         if (node == null){         //traverse from the end of the tree to root node and makes the links.
             System.out.println("Enter the value");
             int value = Integer.parseInt(s.nextLine());
-            Node node1 = new Node(value);
-            return node1;
+//            Node node1 = new Node(value);
+            return new Node(value);     //return node1;
         }
         System.out.println("Enter the direction");
         String dir = s.nextLine();
@@ -35,13 +35,13 @@ public class BinaryTree {
         else {
             node.right = insert(node.right,s);
         }
-        return node;
+        return node; //this line makes the link.
     }
     public void display(){
         display(this.root,"");
     }
 
-    private void display(Node node, String indent) {
+    private void display(Node node, String indent) {  //pre-order traversal
         if (node == null){
             return;
         }
