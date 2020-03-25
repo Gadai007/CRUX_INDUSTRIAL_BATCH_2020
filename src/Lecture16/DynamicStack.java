@@ -11,7 +11,7 @@ public class DynamicStack extends Stack {
             for (int i = 0; i <ar.length ; i++) {
                 data[i] = ar[i];
             }
-            ar = data;
+            ar = data;   //it is the most important part as it changes the references.
         }
         super.push(element);
     }

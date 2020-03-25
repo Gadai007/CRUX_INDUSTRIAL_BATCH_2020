@@ -23,9 +23,9 @@ public class Queue {
     public boolean isEmpty(){
         return  end ==0;
     }
-    public int remove(){
+    public int remove() throws Exception{
         if (isEmpty()){
-            return -1;
+            throw new Exception("Bro khali he");
         }
         int temp = ar[0];
         for (int i = 1; i <end ; i++) {
