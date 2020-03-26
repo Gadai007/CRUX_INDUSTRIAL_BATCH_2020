@@ -23,12 +23,15 @@ public class HashmapLinkedList {
                 return;
             }
         }
+//        Entity e = new Entity(key,value);
+//        entities.add(e);         //Alternative
+
         entities.add(new Entity(key,value));
     }
 
     public String get(String key){
         for (Entity entity: entities) {
-            if(entity.value.equals(key)){
+            if(entity.key.equals(key)){
                 return entity.value;
             }
         }
