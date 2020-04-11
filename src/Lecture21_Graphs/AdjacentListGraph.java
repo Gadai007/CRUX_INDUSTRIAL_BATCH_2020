@@ -1,9 +1,6 @@
 package Lecture21_Graphs;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 public class AdjacentListGraph<T> {
 
@@ -72,12 +69,59 @@ public class AdjacentListGraph<T> {
         while (!queue.isEmpty()){
 
             Vertex temp = queue.remove();
-            System.out.println(temp.value);
+            System.out.print(temp.value);
 
             for (Vertex padosi:temp.neighbour) {
                 if (!visited.contains(padosi)){
                     visited.add(padosi);
                     queue.add(padosi);
+                }
+            }
+        }
+    }
+
+    public boolean BFS(T value){
+        Queue<Vertex> queue = new LinkedList<>();
+        Set<Vertex> visited = new HashSet<>();
+
+        Vertex first = vertices.get(0);
+
+        queue.add(first);
+        visited.add(first);
+
+        while (!queue.isEmpty()){
+            Vertex temp = queue.remove();
+            if (temp.value == value){
+                return true;
+            }
+
+            for (Vertex padosi:vertices) {
+                if(!visited.contains(padosi)){
+                    queue.add(padosi);
+                    visited.add(padosi);
+                }
+            }
+        }
+        return false;
+    }
+
+    public void DFT(){
+        Stack<Vertex> stack = new Stack<>();
+        Set<Vertex> visited = new HashSet<>();
+
+        Vertex first = vertices.get(0);
+
+        stack.push(first);
+        visited.add(first);
+
+        while(!stack.isEmpty()){
+            Vertex temp = stack.pop();
+            System.out.print(temp.value);
+
+            for (Vertex padosi:vertices) {
+                if(!visited.contains(padosi)){
+                    stack.push(padosi);
+                    visited.add(padosi);
                 }
             }
         }

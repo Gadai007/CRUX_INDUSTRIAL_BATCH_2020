@@ -15,7 +15,9 @@ public class ListGraphClient {
         graph.addEdge("C","D");
 
         //graph.BST();
+        //graph.DFT();
+        System.out.println(graph.BFS("E"));
 
-        graph.display();
+       // graph.display();
     }
 }
