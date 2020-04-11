@@ -1,7 +1,7 @@
 package AssignmentRecursion;
 
-import Lecture3.ArraySwap;
-import Lecture3.Utils;
+import Lecture3_Array_Sorting.ArraySwap;
+import Lecture3_Array_Sorting.Utils;
 
 import java.util.Arrays;
 

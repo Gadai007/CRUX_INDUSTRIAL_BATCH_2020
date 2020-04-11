@@ -1,4 +1,4 @@
-package Lecture20;
+package Lecture20_Hashmap;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -86,12 +86,12 @@ public class HashmapArrayList<K,V> {
         for (Entity entity: list) {
             if(entity.key.equals(key)){
                 target = entity;
+                size--;
                 break;
             }
         }
         V temp = target.value;
         entities.remove(target);
-        size--;
         return temp;
     }
 }

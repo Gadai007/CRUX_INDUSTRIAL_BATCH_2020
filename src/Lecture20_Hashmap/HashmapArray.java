@@ -1,4 +1,4 @@
-package Lecture20;
+package Lecture20_Hashmap;
 
 public class HashmapArray {
 

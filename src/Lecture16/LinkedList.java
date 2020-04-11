@@ -1,7 +1,5 @@
 package Lecture16;
 
-import Lecture3.Array;
-
 public class LinkedList {
 
     private Node head;
@@ -262,7 +260,7 @@ public class LinkedList {
         Node temp1 = head;
         Node temp2 = head;
 
-        while (temp2.next != null & temp2.next.next != null){
+        while (temp2.next != null && temp2.next.next != null){
             temp1 = temp1.next;
             temp2 = temp2.next.next;
         }
@@ -273,7 +271,7 @@ public class LinkedList {
         Node temp1 = head;
         Node temp2 = head;
 
-        while (temp2.next != null & temp2.next.next != null){
+        while (temp2.next != null && temp2.next.next != null){
             temp1 = temp1.next;
             temp2 = temp2.next.next;
         }
@@ -312,7 +310,7 @@ public class LinkedList {
         for (int i = 0; i <k ; i++) {
             fast = fast.next;
         }
-        while (fast.next != null){
+        while (fast != null){
             slow= slow.next;
             fast = fast.next;
         }

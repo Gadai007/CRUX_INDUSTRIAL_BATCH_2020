@@ -1,4 +1,4 @@
-package Lecture17;
+package Lecture17_Development;
 
 public class LoggerClient {
     public static void main(String[] args) {

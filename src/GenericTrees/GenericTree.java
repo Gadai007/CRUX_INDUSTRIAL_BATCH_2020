@@ -1,4 +1,4 @@
-package Trees;
+package GenericTrees;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,6 +1,6 @@
 package Lecture4;
 
-import Lecture3.Utils;
+import Lecture3_Array_Sorting.Utils;
 
 import java.util.Arrays;
 

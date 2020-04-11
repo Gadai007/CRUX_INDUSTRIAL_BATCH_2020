@@ -31,7 +31,7 @@ public class LinkedListClient {
         list1.insertatlast(2);
         list1.insertatlast(1);
         list1.display();
-
+ //       list1.mid(list1);
 //        LinkedList newlist = new LinkedList();
 //         newlist = newlist.addlist(list1,list2);
 //        newlist.display();

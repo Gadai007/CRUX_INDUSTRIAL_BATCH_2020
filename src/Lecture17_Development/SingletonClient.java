@@ -1,4 +1,4 @@
-package Lecture17;
+package Lecture17_Development;
 
 public class SingletonClient {
     public static void main(String[] args) {

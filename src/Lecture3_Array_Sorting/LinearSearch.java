@@ -1,4 +1,4 @@
-package Lecture3;
+package Lecture3_Array_Sorting;
 
 public class LinearSearch {
     public static void main(String[] args) {

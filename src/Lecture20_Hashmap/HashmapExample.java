@@ -1,4 +1,4 @@
-package Lecture20;
+package Lecture20_Hashmap;
 
 import java.util.HashMap;
 

@@ -19,7 +19,7 @@ public class BinaryTree {
     public void insert(Scanner s){
         this.root = insert(this.root,s);
     }
-    public Node insert(Node node, Scanner s){
+    private Node insert(Node node, Scanner s){
         if (node == null){         //traverse from the end of the tree to root node and makes the links.
             System.out.println("Enter the value");
             int value = Integer.parseInt(s.nextLine());

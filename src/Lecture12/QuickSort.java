@@ -1,6 +1,6 @@
 package Lecture12;
 
-import Lecture3.ArraySwap;
+import Lecture3_Array_Sorting.ArraySwap;
 
 import java.util.Arrays;
 

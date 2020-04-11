@@ -20,7 +20,7 @@ public class SquareRoot {
              ans = ans - t;
              t= t/10;
          }
-        System.out.printf("% 4f",ans);
+        System.out.printf("% 2f",ans);
     }
     public static int root(int n){
         int start = 0;

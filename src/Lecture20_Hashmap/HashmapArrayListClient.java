@@ -1,6 +1,6 @@
-package Lecture20;
+package Lecture20_Hashmap;
 
-public class ArrayListHeapClient {
+public class HashmapArrayListClient {
     public static void main(String[] args) {
 
         HashmapArrayList<String,String> map = new HashmapArrayList<>();

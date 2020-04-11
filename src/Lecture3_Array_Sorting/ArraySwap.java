@@ -1,6 +1,4 @@
-package Lecture3;
-
-import java.util.Scanner;
+package Lecture3_Array_Sorting;
 
 public class ArraySwap {
     public static void main(String[] args) {

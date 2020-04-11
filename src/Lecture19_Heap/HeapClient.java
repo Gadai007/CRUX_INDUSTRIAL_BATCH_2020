@@ -1,4 +1,4 @@
-package Lecture19;
+package Lecture19_Heap;
 
 public class HeapClient {
 

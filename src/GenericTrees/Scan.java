@@ -1,4 +1,4 @@
-package Trees;
+package GenericTrees;
 
 import java.io.File;
 import java.io.FileNotFoundException;
