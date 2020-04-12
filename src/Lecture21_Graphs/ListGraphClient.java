@@ -9,14 +9,19 @@ public class ListGraphClient {
         graph.addVertex("B");
         graph.addVertex("C");
         graph.addVertex("D");
+        graph.addVertex("E");
 
-        graph.addEdge("A","B");
-        graph.addEdge("A","C");
         graph.addEdge("C","D");
+        graph.addEdge("A","C");
+        graph.addEdge("A","B");
+        graph.addEdge("D","B");
+        graph.addEdge("A","D");
 
         //graph.BST();
         //graph.DFT();
-        System.out.println(graph.BFS("E"));
+       // System.out.println(graph.BFS("E"));
+        //graph.connectedcomponents();
+        System.out.println(graph.bipartite());
 
        // graph.display();
     }

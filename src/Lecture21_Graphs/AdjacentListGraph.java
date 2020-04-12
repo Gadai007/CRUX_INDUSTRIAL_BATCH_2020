@@ -91,7 +91,7 @@ public class AdjacentListGraph<T> {
 
         while (!queue.isEmpty()){
             Vertex temp = queue.remove();
-            if (temp.value == value){
+            if (temp.value.equals(value)){
                 return true;
             }
 
@@ -125,5 +125,80 @@ public class AdjacentListGraph<T> {
                 }
             }
         }
+    }
+
+    public void connectedcomponents(){
+        Queue<Vertex> queue = new LinkedList<>();
+        Set<Vertex> visited = new HashSet<>();
+
+        for (Vertex vertex:vertices) {
+            if(!visited.contains(vertex)){
+                continue;
+            }
+            queue.add(vertex);
+            visited.add(vertex);
+
+            while (!queue.isEmpty()){
+
+                Vertex temp = queue.remove();
+                System.out.print(temp.value);
+
+                for (Vertex padosi:temp.neighbour) {
+                    if (!visited.contains(padosi)){
+                        visited.add(padosi);
+                        queue.add(padosi);
+                    }
+                }
+            }
+        }
+    }
+
+    public boolean bipartite(){
+        Queue<Vertex> queue = new LinkedList<>();
+        Set<Vertex> visited = new HashSet<>();
+
+        Vertex first = vertices.get(0);
+
+        Set<Vertex> red = new HashSet<>();
+        Set<Vertex> green = new HashSet<>();
+
+        queue.add(first);
+        visited.add(first);
+        red.add(first);
+
+        while (!queue.isEmpty()){
+
+            Vertex temp = queue.remove();
+
+            if(red.contains(temp)){
+
+                for (Vertex padosi:temp.neighbour) {
+
+                    if(!visited.contains(padosi)){
+                      queue.add(padosi);
+                      green.add(padosi);
+                      visited.add(padosi);
+                    }
+                    else if(red.contains(padosi)){
+                        return false;
+                    }
+                }
+            }
+
+            if(green.contains(temp)){
+                for (Vertex padosi:temp.neighbour) {
+
+                    if(!visited.contains(padosi)){
+                        queue.add(padosi);
+                        red.add(padosi);
+                        visited.add(padosi);
+                    }
+                    else if(green.contains(padosi)){
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
     }
 }
