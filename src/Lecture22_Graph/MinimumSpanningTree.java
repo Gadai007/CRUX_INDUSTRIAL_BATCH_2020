@@ -27,12 +27,32 @@ public class MinimumSpanningTree<T> {
         }
     }
 
+    private class Edge {
+        Vertex first;
+        Vertex second;
+        Integer weight;
+
+        public Edge(Vertex first, Vertex second, Integer weight) {
+            this.first = first;
+            this.second = second;
+            this.weight = weight;
+        }
+    }
+
     public void setParent(){
 
         for (Vertex vertex:vertexMap.values()) {
 
             parent.put(vertex,null);
         }
+    }
+
+    public Vertex find(Vertex vertex){   //it is used to check the parent
+
+        while (parent.get(vertex)!=null){
+            vertex = parent.get(vertex);
+        }
+        return vertex;
     }
 
     public boolean union(Vertex first, Vertex second){
@@ -47,13 +67,6 @@ public class MinimumSpanningTree<T> {
         return false;
     }
 
-    public Vertex find(Vertex vertex){
-
-        while (parent.get(vertex)!=null){
-            vertex = parent.get(vertex);
-        }
-        return vertex;
-    }
 
     public MinimumSpanningTree<T> kruskal(){
 
@@ -113,18 +126,6 @@ public class MinimumSpanningTree<T> {
                 System.out.print(padosi.value + " ");
             }
             System.out.println();
-        }
-    }
-
-    private class Edge {
-        Vertex first;
-        Vertex second;
-        Integer weight;
-
-        public Edge(Vertex first, Vertex second, Integer weight) {
-            this.first = first;
-            this.second = second;
-            this.weight = weight;
         }
     }
 }

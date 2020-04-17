@@ -24,6 +24,16 @@ public class AdjacentListGraph<T> {
         vertices.add(new Vertex(value));
     }
 
+    public Vertex get(T value){
+
+        for (Vertex vertex:vertices) {
+            if(vertex.value.equals(value)){
+                return vertex;
+            }
+        }
+        return null;
+    }
+
     public void addEdge(T first, T second){
 
         Vertex f = get(first);
@@ -33,16 +43,6 @@ public class AdjacentListGraph<T> {
             f.neighbour.add(s);
             s.neighbour.add(f);
         }
-    }
-
-    public Vertex get(T value){
-
-        for (Vertex vertex:vertices) {
-            if(vertex.value.equals(value)){
-                return vertex;
-            }
-        }
-        return null;
     }
 
     public void display(){
@@ -153,7 +153,7 @@ public class AdjacentListGraph<T> {
         }
     }
 
-    public boolean bipartite(){
+    public boolean bipartite(){    //graph colour red and green
         Queue<Vertex> queue = new LinkedList<>();
         Set<Vertex> visited = new HashSet<>();
 
