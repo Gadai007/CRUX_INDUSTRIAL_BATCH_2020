@@ -5,6 +5,10 @@ import java.util.*;
     public class Graph<T> {
         private HashMap<T, Vertex> vertices;
 
+        public Graph() {
+            vertices = new HashMap<>();
+        }
+        
         class Vertex{
 
             T value;
@@ -16,12 +20,8 @@ import java.util.*;
             }
         }
 
-        public Graph() {
-            vertices = new HashMap<>();
-        }
-
-        public void addVertex(T vname) {
-            vertices.put(vname, new Vertex(vname));
+        public void addVertex(T value) {
+            vertices.put(value, new Vertex(value));
         }
 
         public void addEdge(T v1, T v2, int weight) {
@@ -103,7 +103,6 @@ import java.util.*;
                     }
                 }
             }
-
         }
     }
 
