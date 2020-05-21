@@ -6,12 +6,12 @@ public class SquareRoot {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        //System.out.println(root(n));
+        System.out.println(root(n));
          float ans = root(n);
 
          float t = 0.1f;
 
-         int precision = 4;
+         int precision = 5;
 
          for (int i =0; i < precision ; i++){
              while ( ans*ans < n){
@@ -20,7 +20,7 @@ public class SquareRoot {
              ans = ans - t;
              t= t/10;
          }
-        System.out.printf("% 2f",ans);
+        System.out.printf("%."+precision+"f",ans);
     }
     public static int root(int n){
         int start = 0;

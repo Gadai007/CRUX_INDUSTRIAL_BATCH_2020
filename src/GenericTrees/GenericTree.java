@@ -7,6 +7,16 @@ public class GenericTree {
 
     private Node root;
 
+    private static class Node{
+        private Integer value;
+        private ArrayList<Node> children;
+
+        public Node(Integer value){
+            this.value = value;
+            this.children = new ArrayList<>();
+        }
+    }
+
     public void populate(Scanner scanner){
         this.root = this.populateRec(scanner);
     }
@@ -41,13 +51,5 @@ public class GenericTree {
         }
     }
 
-    private static class Node{
-        private Integer value;
-        private ArrayList<Node> children;
 
-        public Node(Integer value){
-            this.value = value;
-            this.children = new ArrayList<>();
-        }
-    }
 }

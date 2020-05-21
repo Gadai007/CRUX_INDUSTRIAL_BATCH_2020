@@ -6,7 +6,7 @@ public class ArmstrongNumber {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        System.out.println(armstrong(n));
+        System.out.println(armstrong(153));
     }
     public static boolean armstrong(int n){
         int n1 = n;

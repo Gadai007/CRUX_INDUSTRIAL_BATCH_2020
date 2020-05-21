@@ -26,10 +26,13 @@ public class LinkedListClient {
         list1.insertatlast(7);
         list1.insertatlast(6);
         list1.insertatlast(5);
-        list1.insertatlast(4);
         list1.insertatlast(3);
         list1.insertatlast(2);
+        list1.insertatlast(2);
         list1.insertatlast(1);
+        list1.insertatlast(4);
+        list1.insertatlast(4);
+        //list1.duplicate();
         list1.display();
  //       list1.mid(list1);
 //        LinkedList newlist = new LinkedList();
@@ -44,6 +47,7 @@ public class LinkedListClient {
 //        list2= list2.mergesort(list1);
 //        list2.display();
 
-        System.out.println(list1.kthlast(3));
+//        System.out.println(list1.kthlast(3));
+
     }
 }
